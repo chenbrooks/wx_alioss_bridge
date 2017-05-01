@@ -32,7 +32,7 @@ func webServer() {
 	http.HandleFunc("/aliyun/xiumi", xiumi2Oss)
 	http.HandleFunc("/aliyun/local", local2Oss)
 
-	err := http.ListenAndServe("127.0.0.1:9527", nil);
+	err := http.ListenAndServe(":9527", nil);
 	if err != nil{
 		log.Fatal(err)
 	}
